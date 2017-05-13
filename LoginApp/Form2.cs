@@ -23,7 +23,7 @@ namespace LoginApp
             try
             {
                 //This is my connection string i have assigned the database file address path
-                string MyConnection2 = "datasource=localhost;port=3306;username=root;password=1234;database=trs";
+                string MyConnection2 = "datasource=localhost;port=3306;username=Alexandre;password=1234;database=trs";
                 //This is my insert query in which i am taking input from the user through windows forms
                 string Query = "insert into trs.produit(id,indice,nom,config,temps) values('" +this.IdTextBox.Text+ "','" +this.NameTextBox.Text+ "','" +this.FnameTextBox.Text+ "','" +this.AgeTextBox.Text+ "','" +this.SemesterTextBox.Text+ "');";
                 //This is  MySqlConnection here i have created the object and pass my connection string.
@@ -42,7 +42,7 @@ namespace LoginApp
                 dataGridView1.Refresh();
                 MyConn2.Close();
 
-                string MyConnection3 = "datasource=localhost;port=3306;username=root;password=1234;database=trs";
+                string MyConnection3 = "datasource=localhost;port=3306;username=Alexandre;password=1234;database=trs";
                 MySqlConnection MyConn3 = new MySqlConnection(MyConnection3);
                 MySqlDataAdapter MyDA = new MySqlDataAdapter();
                 string sqlSelectAll = "SELECT * from produit";
@@ -70,7 +70,7 @@ namespace LoginApp
             try
             {
                 //This is my connection string i have assigned the database file address path
-                string MyConnection2 = "datasource=localhost;port=3306;username=root;password=1234;database=trs";
+                string MyConnection2 = "datasource=localhost;port=3306;username=Alexandre;password=1234;database=trs";
                 //This is my update query in which i am taking input from the user through windows forms and update the record.
                 string Query = "update trs.produit set id='" + this.IdTextBox.Text + "',indice='" + this.NameTextBox.Text + "',nom='" + this.FnameTextBox.Text + "',config='" + this.AgeTextBox.Text + "',temps='" + this.SemesterTextBox.Text + "' where id='" + this.IdTextBox.Text + "';";
                 //This is  MySqlConnection here i have created the object and pass my connection string.
@@ -88,7 +88,7 @@ namespace LoginApp
 
 
 
-                string MyConnection3 = "datasource=localhost;port=3306;username=root;password=1234;database=trs";
+                string MyConnection3 = "datasource=localhost;port=3306;username=Alexandre;password=1234;database=trs";
                 MySqlConnection MyConn3 = new MySqlConnection(MyConnection3);
                 MySqlDataAdapter MyDA = new MySqlDataAdapter();
                 string sqlSelectAll = "SELECT * from produit";
@@ -115,7 +115,7 @@ namespace LoginApp
         {
             try
             {
-                string MyConnection2 = "datasource=localhost;port=3306;username=root;password=1234;database=trs";
+                string MyConnection2 = "datasource=localhost;port=3306;username=Alexandre;password=1234;database=trs";
                 string Query = "delete from trs.produit where id='" + this.IdTextBox.Text + "';";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
@@ -129,7 +129,7 @@ namespace LoginApp
                 }
                 MyConn2.Close();
 
-                string MyConnection3 = "datasource=localhost;port=3306;username=root;password=1234;database=trs";
+                string MyConnection3 = "datasource=localhost;port=3306;username=Alexandre;password=1234;database=trs";
                 MySqlConnection MyConn3 = new MySqlConnection(MyConnection3);
                 MySqlDataAdapter MyDA = new MySqlDataAdapter();
                 string sqlSelectAll = "SELECT * from produit";
@@ -154,7 +154,7 @@ namespace LoginApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string MyConnection2 = "datasource=localhost;port=3306;username=root;password=1234;database=trs";
+            string MyConnection2 = "datasource=localhost;port=3306;username=Alexandre;password=1234;database=trs";
             MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
             MySqlDataAdapter MyDA = new MySqlDataAdapter();
             string sqlSelectAll = "SELECT * from produit";
@@ -196,7 +196,7 @@ namespace LoginApp
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            string MyConnection2 = "datasource=localhost;port=3306;username=root;password=1234;database=trs";
+            string MyConnection2 = "datasource=localhost;port=3306;username=Alexandre;password=1234;database=trs";
             MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
             MySqlDataAdapter MyDA = new MySqlDataAdapter();
             string sqlSelectAll = "SELECT * from produit";
@@ -226,6 +226,12 @@ namespace LoginApp
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
         }
     }
 }
